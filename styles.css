@@ -21,6 +21,10 @@ nav ul {
   justify-content: space-between;
 }
 
+ul li {
+  padding: 5px;
+}
+
 nav ul, h1{
   flex: 1;
 }
@@ -32,9 +36,11 @@ nav ul, h1{
 }
 
 .front-cover img {
+  position: relative;
   width: 100%;
   height: 600px;
   object-fit: cover;
+  z-index: -2;
 }
 
 .cursor {
@@ -47,9 +53,16 @@ nav ul, h1{
   pointer-events: none;
   transition: all 0.3s ease;
   transition-property: background, transform;
+  transform-origin: 100% 100%;
+  z-index: -1;
+  backdrop-filter: grayscale();
 }
 
 .link-grow {
   transform: scale(1.5);
   background: black;
+}
+
+.hovered-link {
+  color: white;
 }
